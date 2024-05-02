@@ -61,7 +61,7 @@ public class SoulStuffModelProvider extends FabricModelProvider {
 
 
         // LIGHTS
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(SoulStuffBlocks.NICK_O_LANTERN, horizonalRotatable(SoulStuffBlocks.NICK_O_LANTERN, "soul_stuff","block/soul_pumpkin_side", "block/soul_pumpkin_top"));
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(SoulStuffBlocks.NICK_O_LANTERN, horizontalRotatable(SoulStuffBlocks.NICK_O_LANTERN, "soul_stuff","block/soul_pumpkin_side", "block/soul_pumpkin_top"));
         blockStateModelGenerator.registerSimpleCubeAll(SoulStuffBlocks.SOULLIGHT);
     }
 
@@ -70,7 +70,7 @@ public class SoulStuffModelProvider extends FabricModelProvider {
 
     }
 
-    public TextureMap horizonalRotatable(Block front, String nameSpace, String sideId, String endId) {
+    public TextureMap horizontalRotatable(Block front, String nameSpace, String sideId, String endId) {
         return new TextureMap().put(TextureKey.FRONT, TextureMap.getId(front)).put(TextureKey.SIDE, new Identifier(nameSpace, sideId)).put(TextureKey.END, new Identifier(nameSpace, endId));
     }
 
